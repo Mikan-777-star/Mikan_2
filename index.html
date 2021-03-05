@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>くるくるまぞく</title>
+    <link rel="stylesheet" href="Test1.css">
+</head>
+<body>
+    <head>
+        くるくるまぞく！
+    </head>
+    <main>
+        <h1>まぞくがくるくるするだけ</h1>
+        <button id = "button">おしてね</button>
+        <br>
+        <br>
+        <img src="Syamiko.jpg" id = "main">
+        <img src="monmo26980.jpg" id = "main1">
+    </main>
+    <script>
+        const c = document.getElementById("button")
+        c.onclick = () =>{
+            var img = document.getElementById("main");
+            var img2 = document.getElementById("main1");
+            var deg = 0;
+            var s = null
+            function kurukuru(){
+                s = 'rotateZ(' + deg + 'deg)';
+                deg += 3;
+                img.style.transform = s;
+                img2.style.transform = s;
+            }
+            console.log(setInterval(kurukuru, 20));
+            c.remove();
+        }
+    </script>
+</body>
+</html>
