@@ -5,36 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>くるくるまぞく</title>
-    <link rel="stylesheet" href="Test1.css">
+    <link rel="stylesheet" href="https://mikan-777-star.github.io/Mikan_1/Test1.css">
 </head>
 <body>
-    <head>
-        くるくるまぞく！
-    </head>
-    <main>
-        <h1>まぞくがくるくるするだけ</h1>
-        <button id = "button">おしてね</button>
-        <br>
-        <br>
-        <img src="https://mikan-777-star.github.io/Mikan_1/Syamiko.jpg" id = "main">
-        <img src="https://mikan-777-star.github.io/Mikan_1/monmo26980.jpg" id = "main1">
-    </main>
     <script>
-        const c = document.getElementById("button")
-        c.onclick = () =>{
-            var img = document.getElementById("main");
+        function test1(){
+            var ua = navigator.userAgent;
+            console.log(ua);
+            if(ua.indexOf('iPhone') > -1){
+                return true;
+            }
+            if(ua.indexOf('Android') > -1){
+                return true;
+            }
+            if(ua.indexOf('iPad') > -1){
+                return true;
+            }
+            return false;
+        }
+        if(test1()){
+            var main = document.getElementById('main');
+            main.style.fontSize = '50%';
+            main.style.width = 'auto';
+        }
+        function test(){
+            var test = document.getElementById('main');
+            var img = document.getElementById("main2");
             var img2 = document.getElementById("main1");
             var deg = 0;
-            var s = null
+            var deg1 = 0;
+            var s = null;
+            var s1 = null;
             function kurukuru(){
-                s = 'rotateZ(' + deg + 'deg)';
+                s = 'rotateZ('+deg+'deg) rotateX('+deg1+'deg)';
+                s1 = 'rotateZ('+(deg)+'deg) rotateX('+(deg1)+'deg)';
                 deg += 3;
+                deg1 += 2;
+                test.style.transform = s;
                 img.style.transform = s;
                 img2.style.transform = s;
+                if(deg % 360 === 0){
+                    deg = 0;
+                }
+                if(deg1 % 360 === 0){
+                    deg1 = 0;
+                }
             }
             console.log(setInterval(kurukuru, 20));
-            c.remove();
+            document.getElementById('test').remove();
         }
     </script>
+    <main id = "main">
+        <h1>シャミ桃がくるくるするだけ</h1>
+        <a id = "test" href="javascript:void(0)" onclick="test()">押せ</a>
+        <br>
+        <br>
+        <img class = "ALL" src="https://mikan-777-star.github.io/Mikan_1/Syamiko.jpg" id = "main2">
+        <img class = "ALL" src="https://mikan-777-star.github.io/Mikan_1/monmo26980.jpg" id = "main1">
+    </main>
+ 
 </body>
 </html>
