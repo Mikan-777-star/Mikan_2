@@ -9,25 +9,6 @@
 </head>
 <body>
     <script>
-        function test1(){
-            var ua = navigator.userAgent;
-            console.log(ua);
-            if(ua.indexOf('iPhone') > -1){
-                return true;
-            }
-            if(ua.indexOf('Android') > -1){
-                return true;
-            }
-            if(ua.indexOf('iPad') > -1){
-                return true;
-            }
-            return false;
-        }
-        if(test1()){
-            var main = document.getElementById('main');
-            main.style.fontSize = '50%';
-            main.style.width = 'auto';
-        }
         function test(){
             var test = document.getElementById('main');
             var img = document.getElementById("main2");
@@ -64,6 +45,26 @@
         <img class = "ALL" src="https://mikan-777-star.github.io/Mikan_1/Syamiko.jpg" id = "main2">
         <img class = "ALL" src="https://mikan-777-star.github.io/Mikan_1/monmo26980.jpg" id = "main1">
     </main>
- 
+    <script>
+        function test1(){
+            var ua = navigator.userAgent;
+            console.log(ua);
+            if(ua.indexOf('iPhone') > -1){
+                return true;
+            }
+            if(ua.indexOf('Android') > -1){
+                return true;
+            }
+            if(ua.indexOf('iPad') > -1){
+                return true;
+            }
+            return false;
+        }
+        if(test1()){
+            var main = document.getElementById('main');
+            main.style.fontSize = '50%';
+            main.style.width = 'auto';
+        }
+    </script>
 </body>
 </html>
