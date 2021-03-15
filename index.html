@@ -18,11 +18,11 @@
             var s = null;
             var s1 = null;
             function kurukuru(){
-                s = 'rotateZ('+deg+'deg) rotateX('+deg1+'deg)';
-                s1 = 'rotateZ('+(deg)+'deg) rotateX('+(deg1)+'deg)';
-                deg += 3;
-                deg1 += 2;
-                test.style.transform = s;
+                s = 'rotateZ('+(deg * -1)+'deg) rotateX('+(deg1 * -1)+'deg)';
+                s1 = 'rotateZ('+(deg1)+'deg) rotateX('+(deg)+'deg) ';
+                deg += 5;
+                deg1 += 3;
+                test.style.transform = s1;
                 img.style.transform = s;
                 img2.style.transform = s;
                 if(deg % 360 === 0){
