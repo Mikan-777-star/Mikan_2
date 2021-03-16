@@ -29,7 +29,7 @@ var Audios = /** @class */ (function () {
     };
     return Audios;
 }());
-const audios = new Audios("よいまちカンターレ.mp3");
+const audios = new Audios("https://mikan-777-star.github.io/Mikan_2/Yoimachi.mp3");
 /** 
 function start(){
     audios.start();
